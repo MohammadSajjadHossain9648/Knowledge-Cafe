@@ -1,4 +1,5 @@
 import './App.css'
+import Blogs from './components/Blogs/Blogs'
 import Header from './components/Header/Header'
 
 function App() {
@@ -6,6 +7,9 @@ function App() {
     <>
       <div className='font_exo_2 text-black_color sm:mx-8 md:mx-20 lg:mx-40'>
         <Header></Header>
+        <div className="">
+          <Blogs></Blogs>
+        </div>
       </div>
     </>
   )
