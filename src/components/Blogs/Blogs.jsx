@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import Blog from "../Blog/Blog";
 
-const Blogs = () => {
+const Blogs = ({handleAddToBookmarks}) => {
     const [blogs, setBlogs] = useState([]);
 
     // Fetching data from API
@@ -17,7 +17,11 @@ const Blogs = () => {
     return (
         <div>
             {
-                blogs.map(blog => <Blog key={blog.id} blog={blog}></Blog>)
+                blogs.map(blog => <Blog
+                                        key={blog.id}
+                                        blog={blog}
+                                        handleAddToBookmarks={handleAddToBookmarks}
+                                  ></Blog>)
             }
         </div>
     );

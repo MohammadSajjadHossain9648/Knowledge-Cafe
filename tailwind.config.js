@@ -16,7 +16,7 @@ export default {
         shade_blue_violet_color: 'rgba(96, 71, 236, 0.1)',
       },
       gridTemplateColumns: {
-        custom: '1.5fr 0.5fr',
+        custom: '1.4fr 0.6fr',
       }
     },
   },

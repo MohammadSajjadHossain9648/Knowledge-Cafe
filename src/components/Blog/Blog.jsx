@@ -1,6 +1,6 @@
 import bookmarks_icon from '../../assets/bookmarks_icon.svg'
 
-const Blog = ({blog}) => {
+const Blog = ({blog, handleAddToBookmarks}) => {
     const {cover, title, author, author_img, posted_date, reading_time, hashtags } = blog;
 
     return (
@@ -19,9 +19,9 @@ const Blog = ({blog}) => {
                     </figcaption>
                     <div className="flex">
                         <p className="font-medium text-shade_black_color mr-2">{reading_time} min read</p>
-                        <a href="#">
+                        <button onClick={() => handleAddToBookmarks(blog)}>
                             <img src={bookmarks_icon} alt="bookmarks icon image" />
-                        </a>
+                        </button>
                     </div>
                 </div>
                 <h1 className="sm: w-full md:w-3/4 text-3xl font-bold">{title}</h1>
