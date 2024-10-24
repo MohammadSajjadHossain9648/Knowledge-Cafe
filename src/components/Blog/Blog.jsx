@@ -1,10 +1,10 @@
 import bookmarks_icon from '../../assets/bookmarks_icon.svg'
 
-const Blog = ({blog, handleAddToBookmarks}) => {
-    const {cover, title, author, author_img, posted_date, reading_time, hashtags } = blog;
+const Blog = ({ blog, handleAddToBookmarks, handleMarkAsRead }) => {
+    const {id, cover, title, author, author_img, posted_date, reading_time, hashtags } = blog;
 
     return (
-        <div>
+        <div className='space-y-4'>
             <img className="h-80 w-full rounded-md" src={cover} alt="blog image" />
             <div>
                 <div className="my-8 flex justify-between items-center">
@@ -30,7 +30,7 @@ const Blog = ({blog, handleAddToBookmarks}) => {
                         hashtags.map((hashtag, idx) => <span key={idx} className="font-semibold text-shade_black_color mr-3"><a href="#">#{hashtag}</a></span>)
                     }
                 </div>
-                <button className="btn font-semibold text-blue_violet_color border-b border-blue_violet_color">Mark as read</button>
+                <button onClick={() => handleMarkAsRead(id, reading_time)} className="btn font-semibold text-blue_violet_color border-b border-blue_violet_color">Mark as read</button>
 
                 <div className='my-8 border border-shade_black_border_color' />
             </div>

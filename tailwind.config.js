@@ -7,6 +7,8 @@ export default {
   theme: {
     extend: {
       colors: {
+        white_color: 'rgb(255, 255, 255)',
+
         black_color: 'rgb(17, 17, 17)',
         shade_black_color: 'rgba(17, 17, 17, 0.6)',
         shade_black_border_color: 'rgba(17, 17, 17, 0.15)',
@@ -16,7 +18,7 @@ export default {
         shade_blue_violet_color: 'rgba(96, 71, 236, 0.1)',
       },
       gridTemplateColumns: {
-        custom: '1.4fr 0.6fr',
+        custom: '1.3fr 0.7fr',
       }
     },
   },
