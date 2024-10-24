@@ -5,9 +5,7 @@ const Blog = ({blog}) => {
 
     return (
         <div>
-            <figure className="rounded-md">
-                <img className="w-full h-84" src={cover} alt="blog image" />
-            </figure>
+            <img className="h-80 w-full rounded-md" src={cover} alt="blog image" />
             <div>
                 <div className="my-8 flex justify-between items-center">
                     <figcaption className="flex items-center justify-center">
@@ -29,7 +27,7 @@ const Blog = ({blog}) => {
                 <h1 className="sm: w-full md:w-3/4 text-3xl font-bold">{title}</h1>
                 <div className="my-4">
                     {
-                        hashtags.map(hashtag => <span className="font-semibold text-shade_black_color mr-3"><a href="#">#{hashtag}</a></span>)
+                        hashtags.map((hashtag, idx) => <span key={idx} className="font-semibold text-shade_black_color mr-3"><a href="#">#{hashtag}</a></span>)
                     }
                 </div>
                 <button className="btn font-semibold text-blue_violet_color border-b border-blue_violet_color">Mark as read</button>
