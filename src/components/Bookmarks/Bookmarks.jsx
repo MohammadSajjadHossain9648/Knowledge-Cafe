@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import Bookmark from "../Bookmark/Bookmark";
 
 const Bookmarks = ({ bookmarks, readingTime }) => {
@@ -16,5 +17,11 @@ const Bookmarks = ({ bookmarks, readingTime }) => {
         </div>
     );
 };
+
+
+Bookmarks.PropTypes = {
+    bookmarks: PropTypes.array.isRequired,
+    readingTime: PropTypes.number.isRequired,
+}
 
 export default Bookmarks;

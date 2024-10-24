@@ -26,7 +26,7 @@ function App() {
     <>
       <div className='sm:mx-8 md:mx-16 lg:mx-28'>
         <Header></Header>
-        <div className="grid grid-cols-custom gap-4">
+        <div className="grid sm:grid-cols-1 md:grid-cols-custom gap-4">
           <Blogs handleAddToBookmarks={handleAddToBookmarks} handleMarkAsRead={handleMarkAsRead}></Blogs>
           <Bookmarks bookmarks={bookmarks} readingTime={readingTime}></Bookmarks>
         </div>

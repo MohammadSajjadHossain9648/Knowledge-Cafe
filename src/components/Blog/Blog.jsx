@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import bookmarks_icon from '../../assets/bookmarks_icon.svg'
 
 const Blog = ({ blog, handleAddToBookmarks, handleMarkAsRead }) => {
@@ -24,7 +25,7 @@ const Blog = ({ blog, handleAddToBookmarks, handleMarkAsRead }) => {
                         </button>
                     </div>
                 </div>
-                <h1 className="sm: w-full md:w-3/4 text-3xl font-bold">{title}</h1>
+                <h1 className="sm: w-full md:w-4/5 lg:w-3/4 text-3xl font-bold">{title}</h1>
                 <div className="my-4">
                     {
                         hashtags.map((hashtag, idx) => <span key={idx} className="font-semibold text-shade_black_color mr-3"><a href="#">#{hashtag}</a></span>)
@@ -37,5 +38,12 @@ const Blog = ({ blog, handleAddToBookmarks, handleMarkAsRead }) => {
         </div>
     );
 };
+
+
+Blog.PropTypes = {
+    blog: PropTypes.object.isRequired,
+    handleAddToBookmarks: PropTypes.func.isRequired,
+    handleMarkAsRead: PropTypes.func.isRequired,
+}
 
 export default Blog;
